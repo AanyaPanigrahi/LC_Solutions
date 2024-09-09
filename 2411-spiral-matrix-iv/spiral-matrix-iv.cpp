@@ -8,9 +8,13 @@
  *     ListNode(int x, ListNode *next) : val(x), next(next) {}
  * };
  */
+
 class Solution {
 public:
     vector<vector<int>> spiralMatrix(int m, int n, ListNode* head) {
+        ios::sync_with_stdio(false);
+                    cin.tie(0);
+                    cout.tie(0);
         int left=0,right=n-1,top=0,bottom=m-1;
         vector<vector<int>> ans(m,vector<int>(n,-1));
 
