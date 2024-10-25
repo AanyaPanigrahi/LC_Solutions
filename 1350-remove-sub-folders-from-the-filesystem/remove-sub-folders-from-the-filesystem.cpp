@@ -7,7 +7,7 @@ public:
                   });
         unordered_set<string> set;
         for (const auto& dir : folder) {
-            string parentDir;
+            std::string parentDir;
             bool isSubfolder = false;
             for (size_t i = 1; i < dir.size(); i++) {
                 if (dir[i] == '/') {
@@ -23,6 +23,7 @@ public:
             }
         }
         return vector<string>(set.begin(), set.end());
-    }
+    
+}
 }
 ;
