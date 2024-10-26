@@ -31,6 +31,7 @@ public:
         dfs(root->left, level + 1, max(maxLevel, 1 + level + h(root->right)));
         dfs(root->right, level + 1, max(maxLevel, 1 + level + h(root->left)));
     }
+
     vector<int> treeQueries(TreeNode* root, vector<int>& queries) {
         memset(val2H, -1, sizeof(val2H));
         memset(removal, -1, sizeof(removal));
