@@ -1,14 +1,15 @@
 class Solution {
 public:
     int rob(vector<int>& nums) {
-        //two var approach
-        int pre2=0;
-        int pre1=0;
-        for(int i:nums){
-            int curr=max(pre2+i,pre1);
-            pre2=pre1;
-            pre1=curr;
+        //iterative DP approach
+        int n=nums.size();
+        int dp[n][2];
+        dp[0][0]=0;
+        dp[0][1]=nums[0];
+        for(int i=1;i<n;i++){
+            dp[i][0]=max(dp[i-1][0],dp[i-1][1]);
+            dp[i][1]=dp[i-1][0]+nums[i];
         }
-        return pre1;
+        return max(dp[n-1][0],dp[n-1][1]);
     }
 };
