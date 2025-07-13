@@ -5,7 +5,7 @@ public:
     sort(trainers.begin(), trainers.end());
 
     int count = 0;
-    int i = 0, j = 0; 
+    int i = 0, j = 0;
     while (i < players.size() && j < trainers.size()) {
         if (players[i] <= trainers[j]) {
             count++;
